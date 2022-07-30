@@ -22,5 +22,13 @@
     {%-if item.entries-%}
       {%-include menu_item.html collection=item.entries-%}
     {%-endif-%}
+
+    {%-if item.show_collection-%}
+      <ul><li>
+      {%-for sub_item in site[item.show_collection] %}
+        <a class="collection" href="{{ sub_item.url }}">{{ sub_item.title }}</a>
+      {%-endfor-%}
+      </li></ul>
+    {%-endif-%}
   {%-endfor-%}
 </ul>

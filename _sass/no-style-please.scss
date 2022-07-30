@@ -59,17 +59,8 @@ hr {
   &:after { content: attr(data-content) '/////' }
 }
 
-table { width: 100%; }
-
-table, th, td {
-  border: thin solid black;
-  border-collapse: collapse;
-  padding: 0.4rem;
-}
-
-code {
-  color: white;
-  background: black;
+a.collection {
+  white-space:nowrap;
 }
 
 div.highlighter-rouge code {
