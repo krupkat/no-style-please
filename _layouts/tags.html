@@ -1,0 +1,14 @@
+---
+layout: page
+---
+
+<ul>
+{% for post in site.posts %}
+  {% if post.tags contains page.tag-name %}
+    <li>
+      <span>{{- post.date | date: site.theme_config.date_format -}}</span>
+      <a href="{{ post.url | relative_url }}">{{ post.title | downcase }}</a>
+    </li>
+  {% endif %}
+{% endfor %}
+</ul>
