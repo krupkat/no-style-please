@@ -25,7 +25,8 @@
 
     {%-if item.show_collection-%}
       <ul><li>
-      {%-for sub_item in site[item.show_collection] %}
+      {%-assign sorted_collection = site[item.show_collection] | sort: "title" -%}
+      {%-for sub_item in sorted_collection %}
         <a class="collection" href="{{ sub_item.url | relative_url }}">{{ sub_item.title }}</a>
       {%-endfor-%}
       </li></ul>
